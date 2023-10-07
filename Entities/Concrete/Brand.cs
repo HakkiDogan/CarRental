@@ -11,5 +11,7 @@ namespace Entities.Concrete
     {
         public int Id { get; set; }
         public string BrandName { get; set; }
+
+        public ICollection<Car> Cars { get; set; }
     }
 }

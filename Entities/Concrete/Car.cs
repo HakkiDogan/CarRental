@@ -1,6 +1,7 @@
 ﻿using Entities.Abstract;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,8 +13,11 @@ namespace Entities.Concrete
         public int Id { get; set; }
         public int BrandId { get; set; }
         public int ColorId { get; set; }
-        public int DailyPriceId { get; set; }
         public string ModelYear { get; set; }
         public string Description { get; set; }
+        public Brand Brand { get; set; }
+        public Color Color { get; set; }
+        public ICollection<DailyPrice> DailyPrices { get; set; }
+
     }
 }
